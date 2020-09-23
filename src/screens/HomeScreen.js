@@ -1,14 +1,17 @@
 import React from "react";
-import {View, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {View,ScrollView, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const HomeScreen = ({navigation}) => {
   return(
     <View>
+      <ScrollView>
       <Text style={styles.text}>This is Home Screen</Text>
-      <Button 
-        onPress={() => navigation.navigate('Components')}
-        title="Go to Component"
-      />
+      <View style={{marginLeft: 20, marginRight: 20}}>
+        <Button 
+          onPress={() => navigation.navigate('Components')}
+          title="Component(Default Btn)"
+        />
+      </View>
       <TouchableOpacity
       style={styles.btn}
         onPress={() => navigation.navigate('List')}
@@ -26,13 +29,39 @@ const HomeScreen = ({navigation}) => {
           Goto Image Card
         </Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => navigation.navigate('Counter')}
+      >
+        <Text style={{color: 'white', textAlign: 'center'}}>
+          Go to Counter
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => navigation.navigate('Color')}
+      >
+        <Text style={{color: 'white', textAlign: 'center'}}>
+          Generate Color Screen
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => navigation.navigate('AdvanceColor')}
+      >
+        <Text style={{color: 'white', textAlign: 'center'}}>
+          Advance Color Picker
+        </Text>
+      </TouchableOpacity>
+      </ScrollView>
     </View>
   ) 
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30,
+    fontSize: 20,
+    textAlign: 'center',
     marginTop: 20,
     marginBottom: 20
   },
