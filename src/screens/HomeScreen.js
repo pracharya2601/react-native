@@ -53,6 +53,14 @@ const HomeScreen = ({navigation}) => {
           Advance Color Picker
         </Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => navigation.navigate('TextInput')}
+      >
+        <Text style={{color: 'white', textAlign: 'center'}}>
+          Input Form
+        </Text>
+      </TouchableOpacity>
       </ScrollView>
     </View>
   ) 

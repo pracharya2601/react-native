@@ -19,7 +19,6 @@ const style = StyleSheet.create({
     viewStyle: {
         backgroundColor: 'teal',
         padding: 10,
-        width: 100,
         borderRadius: 5
     }
 })
