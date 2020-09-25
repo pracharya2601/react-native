@@ -6,10 +6,16 @@ const HomeScreen = ({navigation}) => {
     <View>
       <ScrollView>
       <Text style={styles.text}>This is Home Screen</Text>
-      <View style={{marginLeft: 20, marginRight: 20}}>
+      <View style={{marginHorizontal: 20, marginVertical: 10}}>
         <Button 
-          onPress={() => navigation.navigate('Components')}
-          title="Component(Default Btn)"
+          onPress={() => navigation.navigate('BoxModel')}
+          title="Component(Goto BoxModel)"
+        />
+      </View>
+      <View style={{marginHorizontal: 20, marginVertical: 10}}>
+        <Button 
+          onPress={() => navigation.navigate('LayOut')}
+          title="Layout Demo"
         />
       </View>
       <TouchableOpacity
